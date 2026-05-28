@@ -1,0 +1,7 @@
+# Nothing should be ignored here — this repo's whole point is to ship the
+# audio binaries. Listing common detritus explicitly so a stray editor
+# scratch file doesn't sneak in.
+.DS_Store
+*.swp
+*.tmp
+*~
