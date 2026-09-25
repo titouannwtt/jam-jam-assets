@@ -5,3 +5,7 @@
 *.swp
 *.tmp
 *~
+
+# Cles de compte de service Google (jamais versionnees)
+jam-jam-*-*.json
+*service-account*.json
