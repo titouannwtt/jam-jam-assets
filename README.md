@@ -32,7 +32,7 @@ There is no app code here: only the files, their release notes and their credits
 | [`v1`](#v1-initial-audio-assets) | 2026-05-29 | Two SoundFonts and the first chord models | 5 | 91.2&nbsp;MB |
 | [`v2`](#v2-retrained-chord-models) | 2026-07-23 | Retrained chord models, speech-to-text model | 3 | 85.7&nbsp;MB |
 | [`v3`](#v3-chord-model-candidate-development-channel) | 2026-07-28 | Candidate chord models for the development channel | 2 | 26.0&nbsp;MB |
-| [`stems-v1`](#stems-v1-stem-separation) | 2026-07-28 | Open-Unmix stem separation, four variants | 4 | 447.8&nbsp;MB |
+| [`stems-v1`](#stems-v1-stem-separation) | 2026-07-28 | Open-Unmix stem separation, two variants | 2 | 107.5&nbsp;MB |
 | [`v4`](#v4-beat-tracking) | 2026-07-29 | Beat This! beat tracking model | 2 | 22.4&nbsp;MB |
 | [`drums-v1`](#drums-v1-drum-kits) | 2026-08-09 | 20 sampled drum and percussion packs, with credits | 21 | 24.3&nbsp;MB |
 | [`song-audio-v1`](#song-audio-v1-songbook-audio) | 2026-09-01 | Public-domain recording for the songbook | 1 | 2.7&nbsp;MB |
@@ -85,12 +85,10 @@ Both are ONNX opset 14 with 170 classes, in the same format as `v2`. Input norma
 
 | File | Size | What it is | License |
 |---|--:|---|---|
-| `umxl_stems.fp16.onnx` | 226.27&nbsp;MB | `umxl` weights, fp16. Recommended: about 0.2 % error against fp32. | [CC BY-NC-SA 4.0 (weights)](#licenses-and-credits) |
-| `umxl_stems.int8.onnx` | 113.93&nbsp;MB | `umxl` weights, int8. Lighter, but vocals and bass degrade (about 30 to 42 %). | [CC BY-NC-SA 4.0 (weights)](#licenses-and-credits) |
-| `umxhq_stems.fp16.onnx` | 71.32&nbsp;MB | `umxhq` weights, fp16. | [MIT](#licenses-and-credits) |
-| `umxhq_stems.int8.onnx` | 36.22&nbsp;MB | `umxhq` weights, int8. | [MIT](#licenses-and-credits) |
+| `umxhq_stems.fp16.onnx` | 71.32&nbsp;MB | `umxhq` weights, fp16. Recommended: under 0.3 % error against fp32. Used by Jam Jam. | [MIT](#licenses-and-credits) |
+| `umxhq_stems.int8.onnx` | 36.22&nbsp;MB | `umxhq` weights, int8. Lighter, but vocals and bass degrade (about 25 %). | [MIT](#licenses-and-credits) |
 
-The release notes describe the `umxl` export; the `umxhq` files follow the same naming.
+The `umxl` variants first published here were removed on 2026-10-14: their weights are licensed for non-commercial use only (CC BY-NC-SA 4.0), and Jam Jam does not use them.
 
 ### `drums-v1`: drum kits
 
@@ -186,8 +184,6 @@ f186d16926664e3e8d002dc57f325605bdd5f338c4c505aadb4cf7b420f55d6d  btc_model_170_
 # stems-v1
 96cf339d63e8b393f9b5991dd1189565010f46271721e928574af5ada7b8e6b1  umxhq_stems.fp16.onnx
 47c2acad199288e714444a76e7d71bb5e4061513a185d3926f18344a54a19404  umxhq_stems.int8.onnx
-4b5157319cdc869377dce8d72901f4053e771b42d3bbe19c304c173b3af7c5fa  umxl_stems.fp16.onnx
-7ee03656d5389fea6ddf5eb07d2778be5b4ffa085a636f3b439e53456d281c2b  umxl_stems.int8.onnx
 
 # drums-v1
 08a020965e0ba6c1abf964a95f46afb6c214fc5a529dbe33745edaf3c26fca53  CREDITS.md
@@ -250,7 +246,6 @@ There is no repository-wide license: each file keeps the license of its source.
 | [GeneralUser GS](https://github.com/mrbumpy409/GeneralUser-GS) 2.0.3 by S. Christian Collins | `GeneralUser-GS.sf2` | [GeneralUser GS License v2.0](https://github.com/mrbumpy409/GeneralUser-GS/blob/main/documentation/LICENSE.txt): free use, including commercial. |
 | [BTC-ISMIR19](https://github.com/jayg996/BTC-ISMIR19), *A Bi-Directional Transformer for Musical Chord Recognition* (ISMIR 2019) | `btc_model_170_*.onnx` in `v1` to `v4` | Upstream code: MIT. These weights were trained for Jam Jam and their license is not stated: see upstream. |
 | [Beat This!](https://github.com/CPJKU/beat_this) by Francesco Foscarin, Jan Schlüter and Gerhard Widmer (ISMIR 2024) | `beat_this_small.onnx` | MIT (code and published weights). |
-| [Open-Unmix](https://github.com/sigsep/open-unmix-pytorch) by SigSep | `umxl_stems.*.onnx` | Code: MIT. `umxl` weights: [CC BY-NC-SA 4.0](https://zenodo.org/records/5069601), non-commercial use only. |
 | [Open-Unmix](https://github.com/sigsep/open-unmix-pytorch) by SigSep | `umxhq_stems.*.onnx` | Code: MIT. `umxhq` weights: [MIT](https://zenodo.org/records/3370489). |
 | [whisper.cpp](https://github.com/ggml-org/whisper.cpp) ([model file](https://huggingface.co/ggerganov/whisper.cpp)), converted from [OpenAI Whisper](https://github.com/openai/whisper) | `ggml-base-q5_1.bin` | MIT. |
 | [FreePats](https://freepats.zenvoid.org/) and the [Versilian Community Sample Library](https://github.com/sgossner/VCSL) | drum packs | CC0 1.0. |
