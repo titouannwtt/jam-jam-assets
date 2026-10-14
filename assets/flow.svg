@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 550" width="1280" height="550" role="img" aria-labelledby="t d">
+  <title id="t">From release to device</title>
+  <desc id="d">Four steps: the app installs without heavy files, downloads a file once from a pinned GitHub Release tag, checks its SHA-256 hash, then keeps it on the device for offline use.</desc>
+  <defs>
+    <style>
+      .sans { font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .flow { stroke-dasharray: 2 10; stroke-linecap: round; animation: dash 1.2s linear infinite; }
+      .hop { animation: hop 3s ease-in-out infinite; }
+      .draw { stroke-dasharray: 90; animation: draw 3.5s ease-out infinite; }
+      .pulse { animation: pulse 3.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes dash { to { stroke-dashoffset: -24; } }
+      @keyframes hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @keyframes draw { 0%, 10% { stroke-dashoffset: 90; } 45%, 100% { stroke-dashoffset: 0; } }
+      @keyframes pulse { 0%, 40%, 100% { transform: scale(1); } 55% { transform: scale(1.15); } 70% { transform: scale(1); } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="1.4" fill="#2D2620" opacity="0.07"/>
+    </pattern>
+    <!-- Mini mascot, 100 x 100 box -->
+    <g id="mush">
+      <path d="M33 56 C30 70 30 86 37 92 C43 97 57 97 63 92 C70 86 70 70 67 56 Z" fill="#FBF7EE" stroke="#2D2620" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M8 52 C8 22 32 6 50 6 C68 6 92 22 92 52 C92 60 84 62 50 62 C16 62 8 60 8 52 Z" fill="#C73E3F" stroke="#2D2620" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="28" cy="34" r="7" fill="#FBF7EE"/><circle cx="52" cy="20" r="8" fill="#FBF7EE"/><circle cx="74" cy="36" r="7" fill="#FBF7EE"/><circle cx="50" cy="46" r="5" fill="#FBF7EE"/>
+      <circle cx="43" cy="73" r="3.6" fill="#2D2620"/><circle cx="57" cy="73" r="3.6" fill="#2D2620"/>
+      <ellipse cx="37" cy="80" rx="4.5" ry="2.8" fill="#EE8A8A"/><ellipse cx="63" cy="80" rx="4.5" ry="2.8" fill="#EE8A8A"/>
+      <path d="M45 81 Q50 87 55 81" fill="none" stroke="#2D2620" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="card">
+      <rect x="6" y="6" width="254" height="314" rx="20" fill="#2D2620"/>
+      <rect x="0" y="0" width="254" height="314" rx="20" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+    </g>
+    <path id="head" d="M0 -9 L12 0 L0 9 Z" fill="#2D2620"/>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="550" rx="32" fill="#F5F0E6"/>
+  <rect x="0" y="0" width="1280" height="550" rx="32" fill="url(#dots)"/>
+  <rect x="1.5" y="1.5" width="1277" height="547" rx="31" fill="none" stroke="#D9D0BC" stroke-width="3"/>
+
+  <text x="48" y="74" class="sans" font-size="34" font-weight="800" fill="#2D2620">From release to device</text>
+  <text x="48" y="110" class="sans" font-size="19" fill="#5C544A">Heavy files stay out of the APK. Each one is fetched once, checked, then kept on the device.</text>
+
+  <!-- Cards -->
+  <use href="#card" x="48" y="146"/>
+  <use href="#card" x="358" y="146"/>
+  <use href="#card" x="668" y="146"/>
+  <use href="#card" x="978" y="146"/>
+
+  <!-- Connectors -->
+  <g stroke="#2D2620" stroke-width="4" fill="none">
+    <path class="flow" d="M314 296 H342"/><path class="flow" d="M624 296 H652"/><path class="flow" d="M934 296 H962"/>
+  </g>
+  <use href="#head" x="342" y="296"/><use href="#head" x="652" y="296"/><use href="#head" x="962" y="296"/>
+
+  <!-- Step badges -->
+  <g class="sans" font-size="18" font-weight="800" text-anchor="middle">
+    <circle cx="80" cy="178" r="18" fill="#2D2620"/><text x="80" y="184" fill="#FBF7EE">1</text>
+    <circle cx="390" cy="178" r="18" fill="#2D2620"/><text x="390" y="184" fill="#FBF7EE">2</text>
+    <circle cx="700" cy="178" r="18" fill="#2D2620"/><text x="700" y="184" fill="#FBF7EE">3</text>
+    <circle cx="1010" cy="178" r="18" fill="#2D2620"/><text x="1010" y="184" fill="#FBF7EE">4</text>
+  </g>
+
+  <!-- 1. Light install -->
+  <circle cx="175" cy="262" r="64" fill="#EBE4D4"/>
+  <rect x="141" y="200" width="68" height="120" rx="13" fill="#2D2620"/>
+  <rect x="148" y="212" width="54" height="94" rx="6" fill="#F5F0E6"/>
+  <use href="#mush" transform="translate(152 236) scale(0.46)"/>
+  <rect x="166" y="310" width="18" height="4" rx="2" fill="#8A8074"/>
+
+  <!-- 2. Download from a release -->
+  <circle cx="485" cy="262" r="64" fill="#EBE4D4"/>
+  <g class="hop">
+    <path d="M462 196 H494 L508 210 V252 H462 Z" fill="#FBF7EE" stroke="#2D2620" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M494 196 V210 H508" fill="none" stroke="#2D2620" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M470 222 H500 M470 232 H496 M470 242 H490" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <rect x="438" y="262" width="94" height="62" rx="6" fill="#C19A6B" stroke="#2D2620" stroke-width="4"/>
+  <path d="M440 284 H530 M440 304 H530" stroke="#8E6B42" stroke-width="3"/>
+  <path d="M532 276 Q546 280 548 292" fill="none" stroke="#8A8074" stroke-width="2.5" stroke-linecap="round"/>
+  <g transform="rotate(14 556 312)">
+    <path d="M548 292 H580 a5 5 0 0 1 5 5 V323 a5 5 0 0 1 -5 5 H548 L538 310 Z" fill="#FBF7EE" stroke="#2D2620" stroke-width="3" stroke-linejoin="round"/>
+    <text x="563" y="316" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2D2620">v2</text>
+  </g>
+
+  <!-- 3. SHA-256 check -->
+  <rect x="740" y="164" width="166" height="30" rx="15" fill="#EBE4D4"/>
+  <text x="823" y="184" text-anchor="middle" class="mono" font-size="14" fill="#2D2620">sha256 5b85…6fa3</text>
+  <circle cx="795" cy="266" r="64" fill="#EBE4D4"/>
+  <g class="pulse">
+    <path d="M795 212 L841 228 V262 C841 292 821 312 795 322 C769 312 749 292 749 262 V228 Z" fill="#5C7B5C" stroke="#2D2620" stroke-width="4" stroke-linejoin="round"/>
+    <path class="draw" d="M774 266 L790 282 L818 248" fill="none" stroke="#FBF7EE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 4. Kept on device -->
+  <circle cx="1105" cy="262" r="64" fill="#EBE4D4"/>
+  <rect x="1071" y="200" width="68" height="120" rx="13" fill="#2D2620"/>
+  <rect x="1078" y="212" width="54" height="94" rx="6" fill="#F5F0E6"/>
+  <path d="M1087 246 H1100 L1105 252 H1123 V282 H1087 Z" fill="#C19A6B" stroke="#2D2620" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="1096" y="310" width="18" height="4" rx="2" fill="#8A8074"/>
+  <circle cx="1140" cy="304" r="17" fill="#4DAA75" stroke="#2D2620" stroke-width="3"/>
+  <path d="M1132 304 L1138 310 L1149 297" fill="none" stroke="#2D2620" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Card texts -->
+  <g class="sans">
+    <g font-size="22" font-weight="800" fill="#2D2620">
+      <text x="72" y="364">Light install</text>
+      <text x="382" y="364">First use</text>
+      <text x="692" y="364">SHA-256 check</text>
+      <text x="1002" y="364">Kept on device</text>
+    </g>
+    <g font-size="17" fill="#5C544A">
+      <text x="72" y="392">The APK ships without</text>
+      <text x="72" y="415">the heavy files, so it</text>
+      <text x="72" y="438">stays small.</text>
+      <text x="382" y="392">The app asks, then</text>
+      <text x="382" y="415">downloads the file once</text>
+      <text x="382" y="438">from a pinned tag.</text>
+      <text x="692" y="392">Its SHA-256 must match</text>
+      <text x="692" y="415">the expected one, or</text>
+      <text x="692" y="438">the file is not used.</text>
+      <text x="1002" y="392">Stored in app storage</text>
+      <text x="1002" y="415">and reused offline,</text>
+      <text x="1002" y="438">with no new download.</text>
+    </g>
+  </g>
+
+  <!-- URL pattern -->
+  <rect x="236" y="480" width="808" height="42" rx="21" fill="#EBE4D4" stroke="#D9D0BC" stroke-width="2"/>
+  <text x="640" y="507" text-anchor="middle" class="mono" font-size="16" fill="#2D2620">https://github.com/titouannwtt/jam-jam-assets/releases/download/<tspan fill="#A3561F" font-weight="700">&lt;tag&gt;</tspan>/<tspan fill="#4E6A4E" font-weight="700">&lt;file&gt;</tspan></text>
+</svg>

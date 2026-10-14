@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 676" width="1280" height="676" role="img" aria-labelledby="t d">
+  <title id="t">What's on the shelf</title>
+  <desc id="d">Seven families of downloadable files: SoundFonts, chord recognition, beat tracking, stem separation, drum kits, speech-to-text and song audio, each with its release tag, file count and size. In total, 7 releases, 38 files, about 700 MB.</desc>
+  <defs>
+    <style>
+      .sans { font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .swing { animation: swing 1.6s ease-in-out infinite alternate; transform-box: view-box; }
+      .spin { animation: spin 6s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .lane { animation: lane 2.4s ease-in-out infinite; }
+      .l2 { animation-delay: 0.6s; } .l3 { animation-delay: 1.2s; } .l4 { animation-delay: 1.8s; }
+      .bob { animation: bob 3.6s ease-in-out infinite; }
+      @keyframes swing { from { transform: rotate(-18deg); } to { transform: rotate(18deg); } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes lane { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+      @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="1.4" fill="#2D2620" opacity="0.07"/>
+    </pattern>
+    <g id="card">
+      <rect x="6" y="6" width="282" height="236" rx="20" fill="#2D2620"/>
+      <rect x="0" y="0" width="282" height="236" rx="20" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+    </g>
+    <g id="mush">
+      <path d="M33 56 C30 70 30 86 37 92 C43 97 57 97 63 92 C70 86 70 70 67 56 Z" fill="#FBF7EE" stroke="#2D2620" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M8 52 C8 22 32 6 50 6 C68 6 92 22 92 52 C92 60 84 62 50 62 C16 62 8 60 8 52 Z" fill="#C73E3F" stroke="#2D2620" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="28" cy="34" r="7" fill="#FBF7EE"/><circle cx="52" cy="20" r="8" fill="#FBF7EE"/><circle cx="74" cy="36" r="7" fill="#FBF7EE"/><circle cx="50" cy="46" r="5" fill="#FBF7EE"/>
+      <circle cx="43" cy="73" r="3.6" fill="#2D2620"/><circle cx="57" cy="73" r="3.6" fill="#2D2620"/>
+      <ellipse cx="37" cy="80" rx="4.5" ry="2.8" fill="#EE8A8A"/><ellipse cx="63" cy="80" rx="4.5" ry="2.8" fill="#EE8A8A"/>
+      <path d="M45 81 Q50 87 55 81" fill="none" stroke="#2D2620" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="676" rx="32" fill="#F5F0E6"/>
+  <rect x="0" y="0" width="1280" height="676" rx="32" fill="url(#dots)"/>
+  <rect x="1.5" y="1.5" width="1277" height="673" rx="31" fill="none" stroke="#D9D0BC" stroke-width="3"/>
+
+  <text x="40" y="74" class="sans" font-size="34" font-weight="800" fill="#2D2620">What's on the shelf</text>
+  <text x="40" y="110" class="sans" font-size="19" fill="#5C544A">Seven families of files. Each one lives in a GitHub Release with its own tag.</text>
+
+  <use href="#card" x="40" y="140"/><use href="#card" x="346" y="140"/><use href="#card" x="652" y="140"/><use href="#card" x="958" y="140"/>
+  <use href="#card" x="40" y="400"/><use href="#card" x="346" y="400"/><use href="#card" x="652" y="400"/>
+  <rect x="964" y="406" width="282" height="236" rx="20" fill="#C73E3F"/>
+  <rect x="958" y="400" width="282" height="236" rx="20" fill="#2D2620" stroke="#2D2620" stroke-width="3"/>
+
+  <!-- Icon backdrops -->
+  <circle cx="96" cy="202" r="38" fill="#F3DCC6"/>
+  <circle cx="402" cy="202" r="38" fill="#DCE5D8"/>
+  <circle cx="708" cy="202" r="38" fill="#EEDFC9"/>
+  <circle cx="1014" cy="202" r="38" fill="#D5EEDF"/>
+  <circle cx="96" cy="462" r="38" fill="#F2D2D0"/>
+  <circle cx="402" cy="462" r="38" fill="#DCE5D8"/>
+  <circle cx="708" cy="462" r="38" fill="#F3DCC6"/>
+
+  <!-- 1. SoundFonts: piano keys -->
+  <rect x="70" y="184" width="52" height="38" rx="4" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+  <path d="M83 186 V220 M96 186 V220 M109 186 V220" stroke="#2D2620" stroke-width="2.5"/>
+  <g fill="#2D2620"><rect x="78" y="185" width="9" height="21" rx="1.5"/><rect x="91" y="185" width="9" height="21" rx="1.5"/><rect x="105" y="185" width="9" height="21" rx="1.5"/></g>
+
+  <!-- 2. Chords: chord diagram -->
+  <rect x="380" y="180" width="44" height="46" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+  <path d="M391 180 V226 M402 180 V226 M413 180 V226 M380 195 H424 M380 210 H424" stroke="#2D2620" stroke-width="2"/>
+  <path d="M378 179 H426" stroke="#2D2620" stroke-width="5"/>
+  <g fill="#5C7B5C" stroke="#2D2620" stroke-width="2"><circle cx="391" cy="188" r="5"/><circle cx="413" cy="203" r="5"/><circle cx="402" cy="218" r="5"/></g>
+
+  <!-- 3. Beat: metronome -->
+  <path d="M694 228 L700 178 H716 L722 228 Z" fill="#C19A6B" stroke="#2D2620" stroke-width="3" stroke-linejoin="round"/>
+  <g class="swing" style="transform-origin: 708px 222px">
+    <path d="M708 222 V178" stroke="#2D2620" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="703" y="188" width="10" height="8" rx="2" fill="#2D2620"/>
+  </g>
+  <rect x="690" y="224" width="36" height="7" rx="3" fill="#2D2620"/>
+
+  <!-- 4. Stems: four lanes -->
+  <rect x="984" y="178" width="60" height="48" rx="8" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+  <g stroke-width="3.5" stroke-linecap="round" fill="none">
+    <path class="lane" d="M991 188 h4 m4 -3 v6 m5 -8 v10 m5 -6 v2 m5 -5 v8 m5 -4 v1 m5 -3 v5 m5 -2 h3" stroke="#C73E3F"/>
+    <path class="lane l2" d="M991 198 h3 m4 -4 v8 m5 -5 v2 m5 -6 v10 m5 -4 v1 m5 -5 v8 m5 -3 v1 m5 h3" stroke="#D17A35"/>
+    <path class="lane l3" d="M991 208 h5 m4 -2 v4 m5 -6 v8 m5 -3 v1 m5 -4 v6 m5 -2 v1 m5 -3 v4 m4 -1 h3" stroke="#5C7B5C"/>
+    <path class="lane l4" d="M991 217 h3 m4 -2 v3 m5 -3 v5 m5 -4 v2 m5 -3 v5 m5 -2 v1 m5 -3 v4 m5 -1 h3" stroke="#8E6B42"/>
+  </g>
+
+  <!-- 5. Drums -->
+  <path d="M72 456 V476 A24 7 0 0 0 120 476 V456 Z" fill="#C73E3F" stroke="#2D2620" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="73,462 82,477 91,463 100,479 109,463 119,477" fill="none" stroke="#FBF7EE" stroke-width="2.5" stroke-linejoin="round"/>
+  <ellipse cx="96" cy="456" rx="24" ry="7" fill="#FBF7EE" stroke="#2D2620" stroke-width="3"/>
+  <path d="M78 432 L104 452 M116 432 L90 452" stroke="#2D2620" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- 6. Speech: microphone -->
+  <path d="M386 458 Q386 482 402 482 Q418 482 418 458" fill="none" stroke="#2D2620" stroke-width="3" stroke-linecap="round"/>
+  <path d="M402 482 V490 M390 491 H414" stroke="#2D2620" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="391" y="430" width="22" height="38" rx="11" fill="#7A9477" stroke="#2D2620" stroke-width="3"/>
+  <path d="M396 442 H408 M396 451 H408" stroke="#2D2620" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- 7. Song audio: record -->
+  <g class="spin">
+    <circle cx="708" cy="462" r="26" fill="#2D2620"/>
+    <circle cx="708" cy="462" r="19" fill="none" stroke="#5C544A" stroke-width="1.5"/>
+    <circle cx="708" cy="462" r="14" fill="none" stroke="#5C544A" stroke-width="1.5"/>
+    <circle cx="708" cy="462" r="9" fill="#D17A35"/>
+    <circle cx="711" cy="459" r="2.2" fill="#FBF7EE"/>
+    <circle cx="708" cy="462" r="1.8" fill="#2D2620"/>
+  </g>
+
+  <!-- Release chips -->
+  <g class="mono" font-size="15" font-weight="700" fill="#2D2620">
+    <rect x="148" y="184" width="38" height="28" rx="14" fill="#EBE4D4"/><text x="167" y="203" text-anchor="middle">v1</text>
+    <rect x="454" y="184" width="92" height="28" rx="14" fill="#EBE4D4"/><text x="500" y="203" text-anchor="middle">v1 to v4</text>
+    <rect x="760" y="184" width="38" height="28" rx="14" fill="#EBE4D4"/><text x="779" y="203" text-anchor="middle">v4</text>
+    <rect x="1066" y="184" width="92" height="28" rx="14" fill="#EBE4D4"/><text x="1112" y="203" text-anchor="middle">stems-v1</text>
+    <rect x="148" y="444" width="92" height="28" rx="14" fill="#EBE4D4"/><text x="194" y="463" text-anchor="middle">drums-v1</text>
+    <rect x="454" y="444" width="38" height="28" rx="14" fill="#EBE4D4"/><text x="473" y="463" text-anchor="middle">v2</text>
+    <rect x="760" y="444" width="138" height="28" rx="14" fill="#EBE4D4"/><text x="829" y="463" text-anchor="middle">song-audio-v1</text>
+  </g>
+
+  <!-- Card texts -->
+  <g class="sans">
+    <g font-size="22" font-weight="800" fill="#2D2620">
+      <text x="64" y="274">SoundFonts</text>
+      <text x="370" y="274">Chord recognition</text>
+      <text x="676" y="274">Beat tracking</text>
+      <text x="982" y="274">Stem separation</text>
+      <text x="64" y="534">Drum kits</text>
+      <text x="370" y="534">Speech-to-text</text>
+      <text x="676" y="534">Song audio</text>
+    </g>
+    <g font-size="17" fill="#5C544A">
+      <text x="64" y="303">Instruments for previews</text><text x="64" y="326">and backing tracks.</text>
+      <text x="370" y="303">BTC, 170 chord classes,</text><text x="370" y="326">offline and real-time.</text>
+      <text x="676" y="303">Beat This! small: beats,</text><text x="676" y="326">downbeats and tempo.</text>
+      <text x="982" y="303">Open-Unmix: vocals,</text><text x="982" y="326">drums, bass, other.</text>
+      <text x="64" y="563">20 sampled packs, from</text><text x="64" y="586">jazz club to trap 808.</text>
+      <text x="370" y="563">Whisper base model</text><text x="370" y="586">for whisper.cpp, q5_1.</text>
+      <text x="676" y="563">Public-domain recording</text><text x="676" y="586">for the songbook.</text>
+    </g>
+  </g>
+  <g class="mono" font-size="15" font-weight="700" fill="#A3561F">
+    <text x="64" y="358">2 files · 72 MB</text>
+    <text x="370" y="358">7 files · up to 13 MB</text>
+    <text x="676" y="358">1 file · 9.4 MB</text>
+    <text x="982" y="358">4 files · 36 to 226 MB</text>
+    <text x="64" y="618">20 packs · 24 MB</text>
+    <text x="370" y="618">1 file · 59.7 MB</text>
+    <text x="676" y="618">1 file · 2.7 MB</text>
+  </g>
+
+  <!-- Summary card -->
+  <circle cx="1021" cy="463" r="44" fill="#43392F"/>
+  <g class="bob"><use href="#mush" transform="translate(982 424) scale(0.78)"/></g>
+  <g class="sans" fill="#FBF7EE">
+    <text x="1082" y="454" font-size="26" font-weight="800">7 releases</text>
+    <text x="1082" y="486" font-size="26" font-weight="800">38 files</text>
+    <text x="1082" y="518" font-size="18" fill="#EBE4D4">about 700 MB</text>
+  </g>
+  <g class="sans" font-size="17" fill="#EBE4D4">
+    <text x="982" y="563">Every file has a SHA-256</text>
+    <text x="982" y="586">digest you can check.</text>
+  </g>
+  <text x="982" y="618" class="mono" font-size="15" font-weight="700" fill="#E9A66B">pin a tag, not latest</text>
+</svg>
