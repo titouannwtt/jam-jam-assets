@@ -131,28 +131,28 @@
       <text x="370" y="303">BTC, 170 chord classes,</text><text x="370" y="326">offline and real-time.</text>
       <text x="676" y="303">Beat This! small: beats,</text><text x="676" y="326">downbeats and tempo.</text>
       <text x="982" y="303">Open-Unmix: vocals,</text><text x="982" y="326">drums, bass, other.</text>
-      <text x="64" y="563">20 sampled packs, from</text><text x="64" y="586">jazz club to trap 808.</text>
+      <text x="64" y="563">Sampled packs, from jazz</text><text x="64" y="586">club to trap 808.</text>
       <text x="370" y="563">Whisper base model</text><text x="370" y="586">for whisper.cpp, q5_1.</text>
       <text x="676" y="563">Public-domain recording</text><text x="676" y="586">for the songbook.</text>
     </g>
   </g>
   <g class="mono" font-size="15" font-weight="700" fill="#A3561F">
-    <text x="64" y="358">2 files · 72 MB</text>
-    <text x="370" y="358">7 files · up to 13 MB</text>
-    <text x="676" y="358">1 file · 9.4 MB</text>
-    <text x="982" y="358">2 files · 36 to 71 MB</text>
-    <text x="64" y="618">20 packs · 24 MB</text>
-    <text x="370" y="618">1 file · 59.7 MB</text>
-    <text x="676" y="618">1 file · 2.7 MB</text>
+    <text x="64" y="358">72 MB</text>
+    <text x="370" y="358">up to 13 MB per model</text>
+    <text x="676" y="358">9.4 MB</text>
+    <text x="982" y="358">36 to 71 MB</text>
+    <text x="64" y="618">24 MB</text>
+    <text x="370" y="618">59.7 MB</text>
+    <text x="676" y="618">2.7 MB</text>
   </g>
 
   <!-- Summary card -->
   <circle cx="1021" cy="463" r="44" fill="#43392F"/>
   <g class="bob"><use href="#mush" transform="translate(982 424) scale(0.78)"/></g>
   <g class="sans" fill="#FBF7EE">
-    <text x="1082" y="454" font-size="26" font-weight="800">7 releases</text>
-    <text x="1082" y="486" font-size="26" font-weight="800">36 files</text>
-    <text x="1082" y="518" font-size="18" fill="#EBE4D4">about 360 MB</text>
+    <text x="1082" y="454" font-size="26" font-weight="800">Pinned</text>
+    <text x="1082" y="486" font-size="26" font-weight="800">versions</text>
+    <text x="1082" y="518" font-size="18" fill="#EBE4D4">cached offline</text>
   </g>
   <g class="sans" font-size="17" fill="#EBE4D4">
     <text x="982" y="563">Every file has a SHA-256</text>

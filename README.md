@@ -9,6 +9,11 @@
   <a href="#licenses-and-credits"><b>Licenses and credits</b></a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/titouannwtt/jam-jam-assets/releases"><img alt="Number of releases, updated live" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Ftitouannwtt%2Fjam-jam-assets%2Freleases%3Fper_page%3D100&amp;query=%24.length&amp;label=releases&amp;color=A3561F"></a>
+  <a href="https://github.com/titouannwtt/jam-jam-assets/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/titouannwtt/jam-jam-assets?sort=date&amp;label=latest&amp;color=5C544A"></a>
+</p>
+
 ## What is this?
 
 [Jam Jam](https://jam-jam.org) is a free chord detector and personal songbook for musicians. This repository holds the heavy files the app needs (SoundFonts, AI models, drum kits, audio) as GitHub Release assets, so the app can download each one the first time it is needed instead of carrying it in the install.
@@ -233,6 +238,7 @@ bb0ca4c1474f03e7d724bccdc212b25f87ab7a29058e80d4b3e3cbf1d8a7e8a6  drum-percussio
      --jq '.assets[] | [.name, .size, .digest] | @tsv'
    ```
 6. **Point the app at the new file** (URL, size and SHA-256), then ship an app update. Older tags stay online for older installs.
+7. **Update the catalog**: a row in the table above, and the family's tag and size in `assets/catalog.svg`. The release count badge updates by itself.
 
 The files do not need to be committed to git. GitHub accepts release files up to 2 GiB each.
 
