@@ -18,6 +18,8 @@
 
 [Jam Jam](https://jam-jam.org) is a free chord detector and personal songbook for musicians. This repository holds the heavy files the app needs (SoundFonts, AI models, drum kits, audio) as GitHub Release assets, so the app can download each one the first time it is needed instead of carrying it in the install.
 
+The models cover the music information retrieval tasks the app runs on the device: ONNX chord recognition and beat tracking, stem separation and Whisper speech-to-text.
+
 There is no app code here: only the files, their release notes and their credits.
 
 ## How the app gets a file
