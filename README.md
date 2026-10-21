@@ -2,6 +2,8 @@
   <img src="assets/banner.svg" alt="jam-jam-assets: the Jam Jam mushroom mascot plays the ukulele next to a shelf of SoundFonts, AI models, drum kits, stems, voice and song files." width="100%">
 </p>
 
+<p align="center">Part of <b>Jam Jam</b>, a free chord, key and tempo detector: <a href="https://github.com/titouannwtt/jam-jam">overview</a> · <a href="https://jam-jam.org/app/detection">web tool</a> · <a href="https://play.google.com/store/apps/details?id=com.jamjam">Android</a> · <a href="https://testflight.apple.com/join/fx95DYFE">iOS beta</a> · <a href="https://github.com/titouannwtt/jam-jam-api-examples">API examples</a></p>
+
 <p align="center">
   <a href="#whats-inside"><b>What's inside</b></a> ·
   <a href="#download-and-verify"><b>Download and verify</b></a> ·
