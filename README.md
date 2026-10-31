@@ -42,6 +42,7 @@ There is no app code here: only the files, their release notes and their credits
 | [`v2`](#v2-retrained-chord-models) | 2026-07-23 | Retrained chord models, speech-to-text model | 3 | 85.7&nbsp;MB |
 | [`v3`](#v3-chord-model-candidate-development-channel) | 2026-07-28 | Candidate chord models for the development channel | 2 | 26.0&nbsp;MB |
 | [`stems-v1`](#stems-v1-stem-separation) | 2026-07-28 | Open-Unmix stem separation, two variants | 2 | 107.5&nbsp;MB |
+| [`stems-v2`](#stems-v2-htdemucs-stem-separation) | 2026-10-31 | HTDemucs stem separation (browser, WebGPU) | 1 | 174.3&nbsp;MB |
 | [`v4`](#v4-beat-tracking) | 2026-07-29 | Beat This! beat tracking model | 2 | 22.4&nbsp;MB |
 | [`drums-v1`](#drums-v1-drum-kits) | 2026-08-09 | 20 sampled drum and percussion packs, with credits | 21 | 24.3&nbsp;MB |
 | [`song-audio-v1`](#song-audio-v1-songbook-audio) | 2026-09-01 | Public-domain recording for the songbook | 1 | 2.7&nbsp;MB |
@@ -98,6 +99,16 @@ Both are ONNX opset 14 with 170 classes, in the same format as `v2`. Input norma
 | `umxhq_stems.int8.onnx` | 36.22&nbsp;MB | `umxhq` weights, int8. Lighter, but vocals and bass degrade (about 25 %). | [MIT](#licenses-and-credits) |
 
 The `umxl` variants first published here were removed on 2026-10-14: their weights are licensed for non-commercial use only (CC BY-NC-SA 4.0), and Jam Jam does not use them.
+
+### `stems-v2`: HTDemucs stem separation
+
+[HTDemucs](https://github.com/facebookresearch/demucs) (checkpoint `955717e8`) exported to ONNX. Same graph as the one Jam Jam runs on its servers, used in the browser with onnxruntime-web (WebGPU) to split a song into four stems (drums, bass, other, vocals) on the user's device. The STFT, inverse STFT and segment stitching are done outside the graph.
+
+| File | Size | What it is | License |
+|---|--:|---|---|
+| `htdemucs-955717e8.onnx` | 174.26&nbsp;MB | HTDemucs weights, fp32. SHA-256 `1507ca3e5360722abca7908fdf8786f664837f14bce98deea6863a2e33d0ecbb`. | [MIT](#licenses-and-credits) |
+
+fp16 does not work: the outputs are NaN under WebGPU.
 
 ### `drums-v1`: drum kits
 
@@ -257,6 +268,7 @@ There is no repository-wide license: each file keeps the license of its source.
 | [BTC-ISMIR19](https://github.com/jayg996/BTC-ISMIR19), *A Bi-Directional Transformer for Musical Chord Recognition* (ISMIR 2019) | `btc_model_170_*.onnx` in `v1` to `v4` | Upstream code: MIT. These weights were trained for Jam Jam and their license is not stated: see upstream. |
 | [Beat This!](https://github.com/CPJKU/beat_this) by Francesco Foscarin, Jan Schlüter and Gerhard Widmer (ISMIR 2024) | `beat_this_small.onnx` | MIT (code and published weights). |
 | [Open-Unmix](https://github.com/sigsep/open-unmix-pytorch) by SigSep | `umxhq_stems.*.onnx` | Code: MIT. `umxhq` weights: [MIT](https://zenodo.org/records/3370489). |
+| [Demucs](https://github.com/facebookresearch/demucs) (HTDemucs) by Alexandre Défossez and Meta AI Research | `htdemucs-955717e8.onnx` | MIT (code and published weights). |
 | [whisper.cpp](https://github.com/ggml-org/whisper.cpp) ([model file](https://huggingface.co/ggerganov/whisper.cpp)), converted from [OpenAI Whisper](https://github.com/openai/whisper) | `ggml-base-q5_1.bin` | MIT. |
 | [FreePats](https://freepats.zenvoid.org/) and the [Versilian Community Sample Library](https://github.com/sgossner/VCSL) | drum packs | CC0 1.0. |
 | DrumGizmo kits: [MuldjordKit](https://drumgizmo.org/wiki/doku.php?id=kits:muldjordkit), [ShittyKit](https://drumgizmo.org/wiki/doku.php?id=kits:shittykit), [Sommerhack Kit](https://drumgizmo.org/wiki/doku.php?id=kits:sommerhack-kit) | drum packs | CC BY 4.0, attribution required (below). |
